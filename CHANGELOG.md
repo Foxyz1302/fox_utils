@@ -1,3 +1,14 @@
+## 0.1.8
+
+* Linux, debug builds only: a Flutter hot restart no longer crashes apps that
+  use media_kit with live players. Hot restart frees the old isolate's
+  NativeCallables while the mpv handles live on; media_kit then sends the
+  leftovers "quit" and mpv calls a dead wakeup callback (SIGSEGV on mpv's
+  "core" thread). The plugin clears every live handle's wakeup callback on
+  the engine's `on-pre-engine-restart` signal (handles found through
+  media_kit's NativeReferenceHolder file). Automatic: depending on fox_utils
+  is enough. Relies on media_kit internals (checked against 1.2.6).
+
 ## 0.1.7
 
 * Add `DesktopDropX` + `DropTarget` — OS-level drag & drop of files and

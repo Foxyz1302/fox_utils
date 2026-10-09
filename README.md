@@ -136,6 +136,16 @@ Platform notes:
 - `readImage` never throws: unreadable files are logged with a stack trace
   and skipped; `null` means "no image in this drop".
 
+### media_kit hot-restart guard (Linux, debug)
+
+Apps using media_kit crash on a hot restart (`R`) while any `Player` is
+alive: mpv calls a wakeup callback that belonged to the discarded isolate.
+fox_utils' Linux plugin clears those callbacks just before the engine
+restarts, so hot restart works. Nothing to call; release builds compile it
+out; it does nothing without media_kit. It reads media_kit's private
+NativeReferenceHolder file (checked against media_kit 1.2.6): re-check after
+media_kit upgrades.
+
 ## Vendored engines
 
 The clipboard channels (`pasteboard` method channel) are **vendored from

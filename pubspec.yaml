@@ -1,6 +1,6 @@
 name: fox_utils
 description: A collection of reusable Flutter widgets and extensions.
-version: 0.1.7
+version: 0.1.8
 
 environment:
   sdk: ^3.9.2

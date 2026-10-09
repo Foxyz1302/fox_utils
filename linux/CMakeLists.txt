@@ -10,6 +10,7 @@ add_library(${PLUGIN_NAME} SHARED
   "fox_utils_plugin.cc"
   "pasteboard_plugin.cc"
   "desktop_drop_plugin.cc"
+  "media_kit_restart_guard.cc"
 )
 apply_standard_settings(${PLUGIN_NAME})
 set_target_properties(${PLUGIN_NAME} PROPERTIES
@@ -19,6 +20,7 @@ target_include_directories(${PLUGIN_NAME} INTERFACE
   "${CMAKE_CURRENT_SOURCE_DIR}/include")
 target_link_libraries(${PLUGIN_NAME} PRIVATE flutter)
 target_link_libraries(${PLUGIN_NAME} PRIVATE PkgConfig::GTK)
+target_link_libraries(${PLUGIN_NAME} PRIVATE ${CMAKE_DL_LIBS})
 
 # List of absolute paths to libraries that should be bundled with the plugin
 set(fox_utils_bundled_libraries

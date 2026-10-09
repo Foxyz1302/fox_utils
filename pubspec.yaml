@@ -1,0 +1,35 @@
+name: fox_utils
+description: A collection of reusable Flutter widgets and extensions.
+version: 0.1.7
+
+environment:
+  sdk: ^3.9.2
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_web_plugins:
+    sdk: flutter
+  cross_file: ^0.3.4+2 # XFile base of DropItem (vendored desktop_drop engine)
+  dio: # Only non-vendored 3rd-party dependency
+  path: ^1.9.0
+  universal_platform: ^1.1.0 # web-safe platform checks (vendored desktop_drop engine)
+  uuid: ^4.0.0
+  web: ^1.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.foxyz.fox_utils
+        pluginClass: FoxUtilsPlugin
+      linux:
+        pluginClass: FoxUtilsPlugin
+      windows:
+        pluginClass: FoxUtilsPlugin

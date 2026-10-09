@@ -19,15 +19,12 @@ target_include_directories(${PLUGIN_NAME} INTERFACE
         "${CMAKE_CURRENT_SOURCE_DIR}/include")
 target_link_libraries(${PLUGIN_NAME} PRIVATE flutter flutter_wrapper_plugin)
 
-# GdiPlus doesn't compile with /W4 warning level; strict flags are scoped to
-# this package's own sources. The vendored desktop_drop engine is compiled
-# as upstream ships it (no warnings-as-errors) since it is not ours to churn.
-set_source_files_properties("fox_utils_plugin.cpp" "pasteboard_plugin.cpp"
-        PROPERTIES COMPILE_OPTIONS
-        "$<$<CXX_COMPILER_ID:MSVC>:/W3 /WX>;$<$<NOT:$<CXX_COMPILER_ID:MSVC>>:-Wall -Wextra -Wpedantic -Werror>")
-set_source_files_properties("desktop_drop_plugin.cpp"
-        PROPERTIES COMPILE_OPTIONS
-        "$<$<CXX_COMPILER_ID:MSVC>:/W3>")
+# GdiPlus doesn't compile with /W4 (the template's level): all sources use
+# /W3, one option per list entry ("/W3 /WX" in one entry reaches cl.exe as a
+# single bad argument, D8021). No warnings-as-errors: a newer MSVC's new
+# warning must not break app releases.
+set_source_files_properties("fox_utils_plugin.cpp" "pasteboard_plugin.cpp" "desktop_drop_plugin.cpp"
+        PROPERTIES COMPILE_OPTIONS "/W3")
 
 # List of absolute paths to libraries that should be bundled with the plugin
 set(fox_utils_bundled_libraries

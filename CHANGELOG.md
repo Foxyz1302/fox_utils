@@ -1,3 +1,9 @@
+## 0.1.9
+
+* Windows: the plugin builds again. Its per-source compile options passed
+  "/W3 /WX" to cl.exe as one argument (error D8021); now plain /W3 for all
+  sources, without warnings-as-errors.
+
 ## 0.1.8
 
 * Linux, debug builds only: a Flutter hot restart no longer crashes apps that

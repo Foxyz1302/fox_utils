@@ -1,3 +1,4 @@
+// The pasteboard part is modified from MixinNetwork's pasteboard v0.5.0 (Apache-2.0, Copyright Mixin Network; see LICENSE).
 package com.foxyz.fox_utils;
 
 import android.content.ClipData;

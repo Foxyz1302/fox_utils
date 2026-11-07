@@ -1,3 +1,4 @@
+// Modified from MixinNetwork's pasteboard v0.5.0 (Apache-2.0, Copyright Mixin Network; see LICENSE).
 import 'dart:js_interop';
 
 import 'package:web/web.dart';

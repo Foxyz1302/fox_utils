@@ -1,3 +1,4 @@
+// Modified from MixinNetwork's desktop_drop v0.7.1 (Apache-2.0, Copyright Mixin Network; see LICENSE).
 #include "include/fox_utils/desktop_drop_plugin.h"
 
 #include <flutter_linux/flutter_linux.h>

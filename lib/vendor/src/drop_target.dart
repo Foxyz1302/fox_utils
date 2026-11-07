@@ -1,3 +1,4 @@
+// Modified from MixinNetwork's desktop_drop v0.7.1 (Apache-2.0, Copyright Mixin Network; see LICENSE).
 import 'package:flutter/widgets.dart';
 import 'package:universal_platform/universal_platform.dart';
 

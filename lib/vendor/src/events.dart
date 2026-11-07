@@ -1,3 +1,4 @@
+// Modified from MixinNetwork's desktop_drop v0.7.1 (Apache-2.0, Copyright Mixin Network; see LICENSE).
 import 'package:fox_utils/vendor/src/drop_item.dart';
 import 'package:flutter/painting.dart';
 

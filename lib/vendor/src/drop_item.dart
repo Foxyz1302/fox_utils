@@ -1,3 +1,4 @@
+// Modified from MixinNetwork's desktop_drop v0.7.1 (Apache-2.0, Copyright Mixin Network; see LICENSE).
 import 'dart:typed_data';
 
 import 'package:cross_file/cross_file.dart';

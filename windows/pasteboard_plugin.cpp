@@ -1,3 +1,4 @@
+// Modified from MixinNetwork's pasteboard v0.5.0 (Apache-2.0, Copyright Mixin Network; see LICENSE).
 #include "include/fox_utils/pasteboard_plugin.h"
 
 #include <flutter/method_channel.h>

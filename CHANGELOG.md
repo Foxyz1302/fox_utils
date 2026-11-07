@@ -1,3 +1,9 @@
+## 0.1.10
+
+* License: MIT for this package's code; the vendored pasteboard and
+  desktop_drop code keeps its Apache-2.0 license (in LICENSE) and is marked
+  as modified.
+
 ## 0.1.9
 
 * Windows: the plugin builds again. Its per-source compile options passed

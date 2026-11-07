@@ -1,3 +1,4 @@
+// Modified from MixinNetwork's desktop_drop v0.7.1 (Apache-2.0, Copyright Mixin Network; see LICENSE).
 #ifndef FLUTTER_PLUGIN_DESKTOP_DROP_PLUGIN_H_
 #define FLUTTER_PLUGIN_DESKTOP_DROP_PLUGIN_H_
 

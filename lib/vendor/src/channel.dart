@@ -1,3 +1,4 @@
+// Modified from MixinNetwork's desktop_drop v0.7.1 (Apache-2.0, Copyright Mixin Network; see LICENSE).
 import 'dart:convert';
 
 import 'package:fox_utils/vendor/src/drop_item.dart';
